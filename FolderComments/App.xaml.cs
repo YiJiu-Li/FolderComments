@@ -75,7 +75,7 @@ namespace FolderComments
                 bool isFile = File.Exists(path);
 
                 // 如果既不是文件也不是文件夹，则停止流程
-                if (!isDirectory && !isFile)
+                if (!isDirectory || isFile)
                 {
                     return;
                 }

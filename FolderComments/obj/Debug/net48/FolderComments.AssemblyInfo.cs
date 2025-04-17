@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FolderComments")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d826e920d4e3a2cafd66dbcbf3105292e113937")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+335437a6e8aabdea1b54b13e52711b57711e6a07")]
 [assembly: System.Reflection.AssemblyProductAttribute("FolderComments")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FolderComments")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

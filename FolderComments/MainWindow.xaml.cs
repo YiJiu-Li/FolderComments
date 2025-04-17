@@ -39,8 +39,8 @@ namespace FolderComments
             // 添加文件夹右键菜单项
             this.registryKeyList.Add($"Software\\Classes\\directory\\shell\\{this.contextMenuText}");
 
-            // 添加文件右键菜单项
-            this.registryKeyList.Add($"Software\\Classes\\*\\shell\\{this.contextMenuText}");
+            //// 添加文件右键菜单项
+            //this.registryKeyList.Add($"Software\\Classes\\*\\shell\\{this.contextMenuText}");
 
             // 根据注册表键更新程序状态
             this.UpdateByRegistryKey();
