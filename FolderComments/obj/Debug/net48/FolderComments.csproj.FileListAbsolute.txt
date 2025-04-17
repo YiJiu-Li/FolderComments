@@ -1,0 +1,16 @@
+E:\VSPoject\2025\FolderComments\FolderComments\obj\Debug\net48\FolderComments.csproj.AssemblyReference.cache
+E:\VSPoject\2025\FolderComments\FolderComments\obj\Debug\net48\MainWindow.g.cs
+E:\VSPoject\2025\FolderComments\FolderComments\obj\Debug\net48\App.g.cs
+E:\VSPoject\2025\FolderComments\FolderComments\obj\Debug\net48\FolderComments_MarkupCompile.cache
+E:\VSPoject\2025\FolderComments\FolderComments\obj\Debug\net48\FolderComments_MarkupCompile.lref
+E:\VSPoject\2025\FolderComments\FolderComments\bin\Debug\net48\FolderComments.exe.config
+E:\VSPoject\2025\FolderComments\FolderComments\bin\Debug\net48\FolderComments.exe
+E:\VSPoject\2025\FolderComments\FolderComments\bin\Debug\net48\FolderComments.pdb
+E:\VSPoject\2025\FolderComments\FolderComments\obj\Debug\net48\MainWindow.baml
+E:\VSPoject\2025\FolderComments\FolderComments\obj\Debug\net48\FolderComments.g.resources
+E:\VSPoject\2025\FolderComments\FolderComments\obj\Debug\net48\FolderComments.GeneratedMSBuildEditorConfig.editorconfig
+E:\VSPoject\2025\FolderComments\FolderComments\obj\Debug\net48\FolderComments.AssemblyInfoInputs.cache
+E:\VSPoject\2025\FolderComments\FolderComments\obj\Debug\net48\FolderComments.AssemblyInfo.cs
+E:\VSPoject\2025\FolderComments\FolderComments\obj\Debug\net48\FolderComments.csproj.CoreCompileInputs.cache
+E:\VSPoject\2025\FolderComments\FolderComments\obj\Debug\net48\FolderComments.exe
+E:\VSPoject\2025\FolderComments\FolderComments\obj\Debug\net48\FolderComments.pdb

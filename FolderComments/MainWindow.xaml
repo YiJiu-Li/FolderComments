@@ -1,0 +1,136 @@
+﻿<Window x:Class="FolderComments.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FolderComments"
+        mc:Ignorable="d"
+        Title="文件夹注释工具" Height="220" Width="300"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Resources>
+        <!-- 按钮样式 -->
+        <Style x:Key="ToggleButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="0,3,0,5"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="border" CornerRadius="6" Background="{TemplateBinding Background}">
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="1" BlurRadius="3" Opacity="0.2"/>
+                                </Border.Effect>
+                            </Border>
+                            <ContentPresenter x:Name="contentPresenter" 
+                                          HorizontalAlignment="Center" 
+                                          VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" TargetName="border" Value="0.5"/>
+                                <Setter Property="Background" TargetName="border" Value="#7F8C8D"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Tag}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="10,5,10,8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- 标题 -->
+        <!--<TextBlock Grid.Row="0" Text="文件夹右键菜单管理" 
+                   FontSize="16" FontWeight="Bold" 
+                   Margin="0,8,0,8" HorizontalAlignment="Center"/>-->
+
+        <!-- 主要内容区域 -->
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" Margin="0,0,0,5">
+            <!-- 注册状态指示器 -->
+            <Border BorderBrush="#DDDDDD" BorderThickness="1" CornerRadius="6" Margin="0,0,0,10">
+                <Grid Height="32">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Ellipse x:Name="statusIndicator" Width="10" Height="10" Margin="12,0,0,0"
+                             Fill="#7F8C8D" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <Ellipse.Style>
+                            <Style TargetType="Ellipse">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=addButton, Path=IsEnabled}" Value="False">
+                                        <Setter Property="Fill" Value="#27AE60"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Ellipse.Style>
+                    </Ellipse>
+                    <TextBlock x:Name="activityToolStripStatusLabel" Grid.Column="1" Text="右键菜单状态: 未注册" Margin="8,0,0,0" 
+                               VerticalAlignment="Center" FontSize="12" FontWeight="Medium">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=addButton, Path=IsEnabled}" Value="False">
+                                        <Setter Property="Text" Value="右键菜单状态: 已注册"/>
+                                        <Setter Property="Foreground" Value="#27AE60"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+            </Border>
+
+            <!-- 添加按钮 -->
+            <Button x:Name="addButton" Content="添加到右键菜单" 
+                    Background="#3498DB" Tag="#2980B9"
+                    Style="{StaticResource ToggleButtonStyle}" 
+                    Click="OnAddButtonClick">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="+" FontSize="15" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding}" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+
+            <!-- 移除按钮 -->
+            <Button x:Name="removeButton" Content="从右键菜单移除" 
+                    Background="#E74C3C" Tag="#C0392B"
+                    Style="{StaticResource ToggleButtonStyle}" 
+                    Click="OnRemoveButtonClick">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="−" FontSize="15" Margin="0,0,6,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding}" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+
+            <!-- 分隔线 -->
+            <Separator Margin="0,8,0,5"/>
+
+            <!-- 版本信息 -->
+            <TextBlock Text="文件夹注释工具 v1.0" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,2,0,0"
+                       FontSize="11" 
+                       Foreground="#7F8C8D"/>
+        </StackPanel>
+    </Grid>
+</Window>
