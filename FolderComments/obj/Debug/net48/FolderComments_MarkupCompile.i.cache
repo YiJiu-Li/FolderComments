@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\VSPoject\2025\FolderComments\FolderComments\obj\Debug\net48\
+E:\VsProject\FolderComments\FolderComments\obj\Debug\net48\
 FolderComments
 none
 false
 TRACE;DEBUG;NETFRAMEWORK;NET48;;NET30_OR_GREATER;NET35_OR_GREATER;NET40_OR_GREATER;NET45_OR_GREATER;NET451_OR_GREATER;NET452_OR_GREATER;NET46_OR_GREATER;NET461_OR_GREATER;NET462_OR_GREATER;NET47_OR_GREATER;NET471_OR_GREATER;NET472_OR_GREATER;NET48_OR_GREATER
-E:\VSPoject\2025\FolderComments\FolderComments\App.xaml
-11407045341
+E:\VsProject\FolderComments\FolderComments\App.xaml
+22143620813
 
-5272574211
+6797169734
 20640903641
-MainWindow.xaml;
+InputDialog.xaml;MainWindow.xaml;
 
 False
 

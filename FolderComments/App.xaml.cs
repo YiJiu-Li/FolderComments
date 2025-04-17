@@ -64,18 +64,24 @@ namespace FolderComments
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            // 检查参数和有效目录
+            // 检查参数
             if (e.Args.Length > 0)
             {
-                // 设置目录路径
-                string directoryPath = e.Args[0];
+                // 设置路径
+                string path = e.Args[0];
 
-                // 检查是否为有效的目录路径
-                if (!Directory.Exists(directoryPath))
+                // 检查是文件还是文件夹
+                bool isDirectory = Directory.Exists(path);
+                bool isFile = File.Exists(path);
+
+                // 如果既不是文件也不是文件夹，则停止流程
+                if (!isDirectory && !isFile)
                 {
-                    // 停止流程
                     return;
                 }
+
+                // 如果是文件，获取其所在文件夹
+                string directoryPath = isDirectory ? path : Path.GetDirectoryName(path);
 
                 // 错误处理和日志记录
                 try
@@ -84,7 +90,6 @@ namespace FolderComments
                     string currentComments = string.Empty;
 
                     /* 获取当前注释 */
-
                     // 设置缓冲区大小
                     const int BUFFERSIZE = 4096;
 
@@ -110,9 +115,17 @@ namespace FolderComments
                     }
 
                     /* 设置当前注释 */
-
                     // 让用户编辑注释
-                    currentComments = Interaction.InputBox("设置新的文件夹注释", "编辑注释", currentComments);
+                    var inputDialog = new InputDialog("", isFile ? "编辑文件所在文件夹注释" : "编辑注释", currentComments);
+                    if (inputDialog.ShowDialog() == true)
+                    {
+                        currentComments = inputDialog.InputText;
+                    }
+                    else
+                    {
+                        // 用户点击了取消，可以在此处理取消操作
+                        return;
+                    }
 
                     // 设置新的注释
                     LPSHFOLDERCUSTOMSETTINGS FolderCustomSettings = new LPSHFOLDERCUSTOMSETTINGS
@@ -124,9 +137,6 @@ namespace FolderComments
 
                     // 写入文件夹自定义设置
                     HRESULT = SHGetSetFolderCustomSettings(ref FolderCustomSettings, directoryPath, FCS_FORCEWRITE);
-
-                    // TODO 成功后通知用户 [或许可以在未来版本中作为选项]
-                    // UNDONE MessageBox.Show("文件夹注释已成功设置", "成功", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 catch (Exception exception)
                 {
@@ -160,5 +170,6 @@ namespace FolderComments
                 mainWindow.Show();
             }
         }
+
     }
 }

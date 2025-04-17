@@ -9,23 +9,23 @@
     ".NETFramework,Version=v4.8": []
   },
   "packageFolders": {
-    "C:\\Users\\12282\\.nuget\\packages\\": {},
+    "C:\\Users\\YZJ\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\VSPoject\\2025\\FolderComments\\FolderComments\\FolderComments.csproj",
+      "projectUniqueName": "E:\\VsProject\\FolderComments\\FolderComments\\FolderComments.csproj",
       "projectName": "FolderComments",
-      "projectPath": "E:\\VSPoject\\2025\\FolderComments\\FolderComments\\FolderComments.csproj",
-      "packagesPath": "C:\\Users\\12282\\.nuget\\packages\\",
-      "outputPath": "E:\\VSPoject\\2025\\FolderComments\\FolderComments\\obj\\",
+      "projectPath": "E:\\VsProject\\FolderComments\\FolderComments\\FolderComments.csproj",
+      "packagesPath": "C:\\Users\\YZJ\\.nuget\\packages\\",
+      "outputPath": "E:\\VsProject\\FolderComments\\FolderComments\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\12282\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\YZJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

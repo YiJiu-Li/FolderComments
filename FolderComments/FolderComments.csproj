@@ -5,10 +5,22 @@
     <TargetFramework>net48</TargetFramework>
     <UseWPF>true</UseWPF>
     <AppName>文件夹注释工具</AppName>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+    <!-- 禁用 PDB 文件生成 -->
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\icon.ico" />
   </ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FolderComments"
         mc:Ignorable="d"
-        Title="文件夹注释工具" Height="220" Width="300"
+        Title="文件夹注释工具" Height="240" Width="200"
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Window.Resources>
         <!-- 按钮样式 -->
