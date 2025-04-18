@@ -1,44 +1,59 @@
-# 文件夹注释
+# 📁 文件夹注释 (FolderComments)
 
-一款实用工具，用于编辑文件夹注释并在Windows资源管理器的"注释"列中显示。
+一款轻量级WPF应用，帮助您为Windows资源管理器中的文件夹添加注释，并在"注释"列中显示。
 
-![FolderComments_v0-1-0](https://user-images.githubusercontent.com/54631779/221388274-152d0899-23cf-46bb-a309-1d7d81c50c73.png)
+<div align="center">
+  <img src="./images/FolderComments-1.png" alt="主界面预览" width="650">
+</div>
 
-![FolderComments_comments-explorer-menu](https://user-images.githubusercontent.com/54631779/221384490-9e5f9341-e02a-4da6-b3f7-bb726d4ae67d.png)
+## ✨ 功能特点
 
-![FolderComments_comments-explorer](https://user-images.githubusercontent.com/54631779/221384492-17672511-ecd5-49b5-9926-ef3c1d5f9eb3.png)
+- 🔄 通过Windows资源管理器右键菜单快速添加/编辑文件夹注释
+- 👁️ 注释添加后立即在资源管理器的"注释"列中显示，无需刷新
+- 🛠️ 使用纯WinAPI实现，性能高效，无需直接修改desktop.ini文件
+- 🖱️ 一键集成/移除右键菜单功能
 
-项目创建者: **mykemo**
+## 📸 使用展示
+
+|右键菜单集成|资源管理器注释列|
+|---|---|
+|![右键菜单集成](./images/FolderComments-2.png)|![资源管理器注释列](./images/FolderComments-3.png)|
+
+添加注释后效果：
+
+<div align="center">
+  <img src="./images/FolderComments-4.png" alt="注释效果" width="650">
+</div>
+
+## 🚀 安装与使用
+
+1. 从[发布页面](https://github.com/YiJiu-Li/FolderComments/releases)下载最新版本
+2. 运行程序，点击"添加右键菜单"按钮将功能集成到资源管理器
+3. 在任意文件夹上右键点击，选择"编辑文件夹注释"
+4. 输入您想添加的注释内容，点击保存
+
+## 🔧 系统要求
+
+- Windows 10/11
+- .NET Framework 4.7.2或更高版本
+
+## 📝 版本历史
+
+### v0.1.0
+- 首个公开发布版本
+- 实现基础的文件夹注释功能
+- 支持资源管理器右键菜单集成
+
+## 👏 致谢
+
+本项目基于[publicdomain/folder-comments](https://github.com/publicdomain/folder-comments)改进开发，感谢原作者**mykemo**的创意和贡献。
 
 讨论来源: [注释列功能构想](https://www.donationcoder.com/forum/index.php?topic=1733.0)
 
-源代码仓库: [GitHub文件夹注释项目](https://github.com/publicdomain/folder-comments)
+## 📄 许可证
 
-适用环境: Windows 10/11系统
+[MIT License](LICENSE)
 
-## 功能特点:
+## 🔗 相关链接
 
-v0.1.0
-
-- 通过同一右键菜单便捷添加或编辑文件夹注释
-- 纯WinAPI调用实现，无需直接修改desktop.ini文件
-- 主程序内可一键添加/删除右键菜单集成
-- 注释添加后立即显示，无需刷新
-
-## 发布支持者:
-
-* Jesse Reichler (A.K.A. Mouser from DonationCoder.com)
-* Max P.
-* Kathryn S.
-* Cranioscopical
-* 您会成为我们的下一位支持者吗？
-
-## 💗 支持:
-
-![PayPal logo](https://i.imgur.com/CSaPEFY.png) 一次性 Paypal 捐赠 @ [https://www.paypal.com/paypalme/victorvls](https://www.paypal.com/paypalme/victorvls)
-
-![Patreon logo](https://i.imgur.com/LKBj3ih.png) 我们的 Patreon 页面 @ [www.patreon.com/publicdomain](https://www.patreon.com/publicdomain).
-
-邮箱/Paypal: publicdomainvic@gmail.com
-
-感谢支持！👍
+- 源代码仓库: [GitHub文件夹注释项目](https://github.com/YiJiu-Li/FolderComments)
