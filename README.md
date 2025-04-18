@@ -3,7 +3,7 @@
 一款轻量级WPF应用，帮助您为Windows资源管理器中的文件夹添加注释，并在"注释"列中显示。
 
 <div align="center">
-  <img src="./images/FolderComments-1.png" alt="主界面预览" width="650">
+  <img src="./images/FolderComments-1.png" alt="主界面预览" width="300">
 </div>
 
 ## ✨ 功能特点
@@ -15,14 +15,18 @@
 
 ## 📸 使用展示
 
+<div align="center">
+
 |右键菜单集成|资源管理器注释列|
-|---|---|
-|![右键菜单集成](./images/FolderComments-2.png)|![资源管理器注释列](./images/FolderComments-3.png)|
+|:---:|:---:|
+|<img src="./images/FolderComments-2.png" alt="右键菜单集成" width="350">|<img src="./images/FolderComments-3.png" alt="资源管理器注释列" width="350">|
+
+</div>
 
 添加注释后效果：
 
 <div align="center">
-  <img src="./images/FolderComments-4.png" alt="注释效果" width="650">
+  <img src="./images/FolderComments-4.png" alt="注释效果" width="600">
 </div>
 
 ## 🚀 安装与使用
@@ -47,8 +51,6 @@
 ## 👏 致谢
 
 本项目基于[publicdomain/folder-comments](https://github.com/publicdomain/folder-comments)改进开发，感谢原作者**mykemo**的创意和贡献。
-
-讨论来源: [注释列功能构想](https://www.donationcoder.com/forum/index.php?topic=1733.0)
 
 ## 📄 许可证
 
